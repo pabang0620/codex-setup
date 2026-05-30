@@ -1,0 +1,44 @@
+---
+name: "source-command-update-docs"
+description: "Migrated Claude slash command: /update-docs"
+---
+
+# source-command-update-docs
+
+Use this skill when the user asks to run the migrated source command `/update-docs`.
+
+## Command Template
+
+# Update Documentation
+
+Use the doc-updater agent to perform this task.
+
+단일 출처(source-of-truth)에서 문서 동기화:
+
+1. package.json scripts 섹션 읽기
+   - 스크립트 참조 테이블 생성
+   - 주석에서 설명 포함
+
+2. .env.example 읽기
+   - 모든 환경 변수 추출
+   - 목적 및 형식 문서화
+
+3. 다음 내용으로 docs/CONTRIB.md 생성:
+   - 개발 워크플로우
+   - 사용 가능한 스크립트
+   - 환경 설정
+   - 테스트 절차
+
+4. 다음 내용으로 docs/RUNBOOK.md 생성:
+   - 배포 절차
+   - 모니터링 및 알림
+   - 일반적인 문제 및 해결 방법
+   - 롤백 절차
+
+5. 오래된 문서 식별:
+   - 90일 이상 수정되지 않은 문서 찾기
+   - 수동 검토를 위해 목록화
+
+6. 차이 요약 표시
+
+단일 출처: package.json 및 .env.example
