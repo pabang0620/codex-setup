@@ -11,6 +11,14 @@
    - 변경된 함수/스키마의 모든 호출부 확인
    - 기존 기능이 깨지지 않는지 검증 방법 명시
 
+## 작업 전 계획 설명 규칙 (사용자 선호 — 필수)
+
+코드 수정, 파일 생성/삭제, 설정 변경, 빌드·배포·깃 작업처럼 상태가 바뀌는 작업을 시작하기 전에는 항상 먼저 짧은 계획을 사용자에게 설명한다.
+- 계획에는 목표, 변경 대상, 접근 방식, 검증 방법, 중단/질문 조건을 포함한다.
+- 요구사항이 모호하거나 의도 파악이 충분하지 않으면 수정하지 말고 먼저 질문한다.
+- 사용자가 "바로 해", "계획 생략", "그냥 진행"처럼 명시적으로 허용한 경우에만 계획 설명을 생략할 수 있다.
+- 단순 조회, 읽기 전용 검색, 상태 확인은 계획 대신 짧은 사전 안내만으로 충분하다.
+
 ---
 
 ## 오케스트레이터 필수 규칙 (CRITICAL — 모든 요청 전 확인)
@@ -182,6 +190,7 @@ Keep runtime marker contracts stable and non-destructive when overlays are appli
 - Within a single Codex session or team pane, use Codex native subagents for independent, bounded parallel subtasks when that improves throughput.
 <!-- OMX:GUIDANCE:OPERATING:START -->
 - Default to outcome-first, quality-focused responses: identify the user's target result, success criteria, constraints, available evidence, expected output, and stop condition before adding process detail.
+- Before any state-changing work, explain the plan first: target result, files or systems likely to change, approach, validation, and the condition that would make the agent stop and ask. This user preference overrides automatic execution unless the user explicitly asks to skip the plan.
 - Keep collaboration style short and direct. Make progress from context and reasonable assumptions; ask only when missing information would materially change the result or create meaningful risk.
 - Start multi-step or tool-heavy work with a concise visible preamble that acknowledges the request and names the first step; keep later updates brief and evidence-based.
 - Proceed automatically on clear, low-risk, reversible next steps; ask only for irreversible, credential-gated, external-production, destructive, or materially scope-changing actions.
